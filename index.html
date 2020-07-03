@@ -2,46 +2,43 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>My Docs</title>
-    <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
-    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
-    <style>
-        .SidebarItems a, .ItemTitle span {
-            font-size: 16px !important;
-            line-height: 32px !important;
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>数据应用</title>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+	<script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+	<style>
+		.SidebarItems a,
+		.ItemTitle span {
+			font-size: 16px !important;
+			line-height: 32px !important;
+		}
+		.EditLink {
+			display: none;
+		}
+	</style>
 </head>
 
 <body>
-    <div id="docute"></div>
-    <script src="./global.js"></script>
-    <script src="./sidebar.zh.js"></script>
-    <script src="./sidebar.en.js"></script>
-    <script>
-    // https://docute.org/zh/
-    var config = {
-        target: '#docute',
-        title: "VSCode Rainbow Fart",
-        darkThemeToggler: true,
-        detectSystemDarkTheme: true,
-        editLinkBase: "https://github.com/saekiraku/vscode-rainbow-fart/blob/master/docs",
+	<div id="docute"></div>
+	<script src="./global.js"></script>
+	<script src="./sidebar.js"></script>
+	<script>
+		var config = {
+			target: '#docute',
+			title: "数据应用系统",
+			darkThemeToggler: true,
+			detectSystemDarkTheme: true,
+			editLinkBase: "https://github.com/saekiraku/vscode-rainbow-fart/blob/master/docs"
+		};
 
-        overrides: {
-            "/en/": I18N_EN,
-            "/zh/": I18N_ZH
-        }
-    };
+		for (let key in I18N_ZH) {
+			config[key] = I18N_ZH[key]
+		}
 
-    for(let key in I18N_EN){
-        console.log(key);
-        config[key] = I18N_EN[key]
-    }
-
-    new Docute(config);
-    </script>
+		new Docute(config)
+	</script>
 </body>
 
 </html>
