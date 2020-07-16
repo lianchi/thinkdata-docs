@@ -4,7 +4,7 @@
 
 <Note label="演示视频">
 
-<video src="/docs/assets/demo.mp4" controls width="100%"></video>
+<video src="/docs/assets/thinkdata.mp4" controls width="100%"></video>
 
 </Note>
 
